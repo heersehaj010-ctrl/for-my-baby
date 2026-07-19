@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Baby 🤍</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff7fa;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:25px;
+overflow-x:hidden;
+}
+
+.card{
+background:white;
+max-width:420px;
+width:100%;
+padding:30px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+text-align:center;
+animation:fade 1s;
+}
+
+h1{
+color:#ff5f8d;
+margin-bottom:15px;
+}
+
+p{
+color:#555;
+line-height:1.8;
+margin:12px 0;
+}
+
+button{
+background:#ff5f8d;
+color:white;
+border:none;
+padding:14px 35px;
+border-radius:30px;
+font-size:17px;
+cursor:pointer;
+margin-top:20px;
+}
+
+img{
+width:100%;
+border-radius:20px;
+margin-top:20px;
+}
+
+.section{
+display:none;
+animation:fade 1s;
+}
+
+.active{
+display:block;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(15px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div id="page1" class="active">
+
+<h1>Hey Baby 🤍</h1>
+
+<p>I made something for you.</p>
+
+<p>Please read it till the end ❤️</p>
+
+<button onclick="next(2)">Open</button>
+
+</div>
+
+<div id="page2" class="section">
+
+<h1>I'm Sorry Baby 🤍</h1>
+
+<p>
+I know I hurt you last night, and I'm really sorry.
+</p>
+
+<p>
+I swear, at that moment I genuinely didn't realize what I'd done wrong. When you told me I was wrong, I didn't understand what you meant. But I kept thinking about it, and I realized it's the same thing you've been asking me to work on all this time—being more vocal, more expressive, and sharing things with you without overthinking.
+</p>
+
+<p>
+It's not that I don't trust you. It's not that I don't love you or care about you. You are my whole heart.
+</p>
+
+<p>
+I don't even know why I get embarrassed sometimes. It's never because I'm scared you'll judge me, because I know you never would. I guess it's just something in me that I really need to work on.
+</p>
+
+<p>
+I know I ruined your night, and nothing hurts me more than knowing I was the reason you went to sleep upset. I love you so much, and the last thing I ever want is to be the reason you're hurting.
+</p>
+
+<p>
+From now on, even if I feel embarrassed or hesitant, I'll tell you instead of keeping it to myself.
+</p>
+
+<p>
+I know I keep saying sorry, and maybe it gets annoying to hear, but I genuinely mean it. I love you more than you'll ever know, and I really will work on this from now on. ❤️
+</p>
+
+<button onclick="next(3)">One More Thing ❤️</button>
+
+</div>
+
+<div id="page3" class="section">
+
+<h1>Our Memory 📸</h1>
+
+<p>
+We'll add our favorite picture here in the next step.
+</p>
+
+<button onclick="next(4)">Continue 🤍</button>
+
+</div>
+
+<div id="page4" class="section">
+
+<h1>Forever ❤️</h1>
+
+<p>
+If you're still upset...
+
+I'll understand.
+</p>
+
+<p>
+If you need time...
+
+I'll wait.
+</p>
+
+<p>
+Because loving you was never temporary.
+
+It has always been forever for me.
+</p>
+
+<h2 style="margin-top:25px;color:#ff5f8d;">
+I love you. Always. 🤍
+</h2>
+
+</div>
+
+</div>
+
+<script>
+
+function next(n){
+
+document.querySelectorAll(".section,.active").forEach(e=>{
+e.classList.remove("active");
+e.classList.add("section");
+});
+
+document.getElementById("page"+n).classList.remove("section");
+document.getElementById("page"+n).classList.add("active");
+
+}
+
+</script>
+
+</body>
+
+</html>
